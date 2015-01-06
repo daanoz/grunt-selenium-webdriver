@@ -145,6 +145,9 @@ function start( next, isHeadless, options ) {
         selOptions.push( '-maxSession' );
         selOptions.push( options.maxSession );
     }
+    if ( options.chromeDriver) {
+        selOptions.push( '-Dwebdriver.chrome.driver=' + options.chromeDriver);
+    }
 
     var spawnOptions = options['cwd'] ? {cwd: options['cwd']} : null;
     seleniumServerProcess = spawn( 'java', selOptions, spawnOptions );
@@ -259,6 +262,7 @@ module.exports= function ( grunt) {
           host: '127.0.0.1',
           port: 4444,
           maxSession: false,
+          chromeDriver : false,
           cwd: null
         });
         var done = this.async();

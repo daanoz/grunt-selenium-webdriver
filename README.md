@@ -4,8 +4,6 @@
 
 We wrote this after extensive problems getting selenium webdriver tests to run in all local and 3rd party environments. If you are using circleci and want to run headless tests then the selenium_phantom_hub task will do the trick.
 
-Note that we have found probems with selenium and bundled chromedriver but at the current time we do not have an option to start chromedriver in the same way as phantomjs. Our advice is use firefox and phantom for CI testing and saucelabs / local for the rest.
-
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
 
@@ -53,6 +51,7 @@ You can see we do this in our tests, have a look at our GruntFile setup for the 
 - timeout
 - maxSession
 - phantomPort
+- chromeDriver
 
 ### Usage Examples
 
